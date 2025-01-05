@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-#include "headers.h"
+//#include "headers.h"
 class Solution {
 public:
     vector<int> plusOne(vector<int>& digits) {
@@ -14,7 +14,7 @@ public:
         {
             amount += digits[i] * (10 * (digits.size()-i));
         }
-        
+
         return {amount};
         
         
