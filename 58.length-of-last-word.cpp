@@ -14,11 +14,11 @@ public:
 
         for (int i = s.size(); i >= 0; i--)
         {
-            if(wordStarted) count ++;
 
             if(!wordStarted && isalpha(s[i])) wordStarted = true;
 
             if(wordStarted && !isalpha(s[i])) break;
+            if(wordStarted) count ++;
         }
         
 
