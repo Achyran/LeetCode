@@ -5,29 +5,44 @@
  */
 
 // @lc code=start
-//#include "headers.h"
+#include "headers.h"
 
 class Solution {
 public:
     bool isPalindrome(string s) {
+
+        if(s.size() >= 1) return true;
+
+        string cleaned = "";
+
+        for (int i = 0; i < s.size(); i++)
+        {
+            if(isalnum(s[i])){
+                cleaned += tolower( s[i]);
+            }
+        }
+        
+        
+
+
         stack<char> sta;
 
-        bool isOdd = s.size() %2;
+        bool isOdd = cleaned.size() %2;
 
         bool stackup = true;
 
-        for (int i = 0; i < s.size()/2; i++)
+        for (int i = 0; i < cleaned.size()/2; i++)
         {
-            if(isalnum(s[i])){
-                sta.push( tolower(s[i]));
+            if(isalnum(cleaned[i])){
+                sta.push(cleaned[i]);
             }
         }
 
-        int start = (s.size() % 2) ? s.size()/2+1:s.size();
+        int start = (cleaned.size() % 2) ? cleaned.size()/2+1:cleaned.size();
 
-        for (int i = start +1; i < s.size(); i++)
+        for (int i = start +1; i < cleaned.size(); i++)
         {
-            if(sta.top() != tolower(s[i])) return false;
+            if(sta.top() != cleaned[i]) return false;
             sta.pop();
         }
         
