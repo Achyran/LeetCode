@@ -22,7 +22,7 @@ public:
             }
         }
         
-        digits.emplace(digits.begin(),1);
+        digits.insert(digits.begin(),1);
         
         return digits;
         
