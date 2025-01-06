@@ -11,6 +11,7 @@ public:
     int mySqrt(int x) {
         
         if(x == 0) return 0;
+        if(x == 1 ) return 1;
 
         unsigned int lowerBound = 0;
         unsigned int upperBound = x;
@@ -19,8 +20,6 @@ public:
         while (lowerBound <= upperBound)
         {
             unsigned int cur = lowerBound + ((upperBound-lowerBound)/2);
-            
-            cout << cur << endl;
 
             if(cur > x/cur){
                 upperBound = cur-1;
