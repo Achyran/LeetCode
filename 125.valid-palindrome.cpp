@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-#include "headers.h"
+//#include "headers.h"
 
 class Solution {
 public:
@@ -17,13 +17,14 @@ public:
         for (int i = 0; i < s.size(); i++)
         {
             if(isalnum(s[i])){
-                cleaned += tolower( s[i]);
+                cleaned += tolower(s[i]);
             }
         }
         
+        
         if(cleaned.size() <= 1) return true;
 
-        if(cleaned.size() == 2) return  tolower( s[0]) == tolower( s[1]);
+        if(cleaned.size() == 2) return  tolower( cleaned[0]) == tolower( cleaned[1]);
 
         stack<char> sta;
 
@@ -31,7 +32,7 @@ public:
 
         bool stackup = true;
 
-        for (int i = 0; i <= cleaned.size()/2; i++)
+        for (int i = 0; i < cleaned.size()/2; i++)
         {
             if(isalnum(cleaned[i])){
                 sta.push(cleaned[i]);
@@ -39,9 +40,10 @@ public:
             }
         }
 
-        if(cleaned.size() % 2 ==1) sta.pop();
+        int start = cleaned.size()/2;
+        if(cleaned.size() % 2 ==1) start ++;
 
-        for (int i = cleaned.size()/2 +1; i < cleaned.size(); i++)
+        for (int i = start ; i < cleaned.size(); i++)
         {
             if(sta.top() != cleaned[i]) return false;
             sta.pop();
