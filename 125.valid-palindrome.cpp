@@ -11,7 +11,6 @@ class Solution {
 public:
     bool isPalindrome(string s) {
 
-        if(s.size() >= 1) return true;
 
         string cleaned = "";
 
@@ -22,8 +21,9 @@ public:
             }
         }
         
-        
+        if(cleaned.size() <= 1) return true;
 
+        if(cleaned.size() == 2) return  tolower( s[0]) == tolower( s[1]);
 
         stack<char> sta;
 
@@ -31,16 +31,17 @@ public:
 
         bool stackup = true;
 
-        for (int i = 0; i < cleaned.size()/2; i++)
+        for (int i = 0; i <= cleaned.size()/2; i++)
         {
             if(isalnum(cleaned[i])){
                 sta.push(cleaned[i]);
+                cout << cleaned[i] << endl;
             }
         }
 
-        int start = (cleaned.size() % 2) ? cleaned.size()/2+1:cleaned.size();
+        if(cleaned.size() % 2 ==1) sta.pop();
 
-        for (int i = start +1; i < cleaned.size(); i++)
+        for (int i = cleaned.size()/2 +1; i < cleaned.size(); i++)
         {
             if(sta.top() != cleaned[i]) return false;
             sta.pop();
