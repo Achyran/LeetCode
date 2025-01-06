@@ -36,7 +36,6 @@ public:
         {
             if(isalnum(cleaned[i])){
                 sta.push(cleaned[i]);
-                cout << cleaned[i] << endl;
             }
         }
 
