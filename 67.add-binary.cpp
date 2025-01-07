@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-#include "headers.h"
+//#include "headers.h"
 
 class Solution {
 public:
@@ -28,7 +28,7 @@ public:
             int temp = carry;
             if(base[i] == '1') temp ++;
             if(add[i] == '1') temp ++;
-
+            
             switch (temp)
             {
             case 0:
@@ -39,7 +39,7 @@ public:
                 break;
             case 2:
                 carry = 1;
-                base[i] = '1';
+                base[i] = '0';
             case 3:
                 carry =1;
                 base[i] = '1';
@@ -48,7 +48,7 @@ public:
 
         }
 
-        if(base.length() == add.length && carry == 1){
+        if(base.length() == add.length() && carry == 1){
             base = '1' + base;
         }
 
