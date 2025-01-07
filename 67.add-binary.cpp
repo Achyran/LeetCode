@@ -27,8 +27,8 @@ public:
         {
             int temp = carry;
             if(base[i] == '1') temp ++;
-            if(add[i] == '1') temp ++;
-            
+            if(add[ i] == '1') temp ++;
+            cout << "b:"<< base[i] << " a:" << add[i] << "      " << add.length()-1<< "   " <<temp << endl;
             switch (temp)
             {
             case 0:
@@ -45,7 +45,6 @@ public:
                 base[i] = '1';
                 break;
             }
-
         }
 
         if(base.length() == add.length() && carry == 1){
