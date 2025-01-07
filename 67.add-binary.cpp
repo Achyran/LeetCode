@@ -12,6 +12,20 @@ public:
     string addBinary(string a, string b) {
         int carry = 0;
         
+        string base;
+        string add;
+
+        if(a.length() > b.length()){
+            base = a;
+            add = b;
+        }else{
+            base = b;
+            add = a;
+        }
+
+        
+
+
     }
 };
 // @lc code=end
