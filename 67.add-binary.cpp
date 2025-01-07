@@ -23,7 +23,6 @@ public:
             int temp = carry;
             if(bCounter >= 0 && b[bCounter] == '1') temp ++;
             if(aCounter >= 0 && a[aCounter] == '1') temp ++;
-            cout<< aCounter <<"  " << bCounter   << endl;
             switch (temp)
             {
             case 0:
@@ -36,7 +35,6 @@ public:
                 biggerThanZero = true;
                 break;
             case 2:
-            cout << "*3" <<endl;
                 carry = 1;
                 output = '0' + output;
                 biggerThanZero = true;
@@ -49,10 +47,9 @@ public:
             }
             bCounter--;
             aCounter--;
-            cout << output << endl;
         }
 
-        if(!biggerThanZero) return "";
+        if(!biggerThanZero) return "0";
         if(carry == 1){
             output = '1' + output;
         }
