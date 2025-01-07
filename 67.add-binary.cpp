@@ -5,9 +5,12 @@
  */
 
 // @lc code=start
+#include "headers.h"
+
 class Solution {
 public:
     string addBinary(string a, string b) {
+        int carry = 0;
         
     }
 };
