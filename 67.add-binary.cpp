@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-#include "headers.h"
+//#include "headers.h"
 
 class Solution {
 public:
@@ -18,7 +18,7 @@ public:
         
         string output = "";
 
-        while (aCount >=0 && bCounter >=0)
+        while (aCounter >=0 && bCounter >=0)
         {
             int temp = carry;
             if(b[bCounter] == '1') temp ++;
