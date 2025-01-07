@@ -18,12 +18,12 @@ public:
         
         string output = "";
 
-        while (aCounter >=0 && bCounter >=0)
+        while (aCounter >=0 || bCounter >=0)
         {
             int temp = carry;
             if(bCounter >= 0 && b[bCounter] == '1') temp ++;
             if(aCounter >= 0 && a[aCounter] == '1') temp ++;
-
+            cout<< aCounter <<"  " << bCounter   << endl;
             switch (temp)
             {
             case 0:
@@ -36,17 +36,20 @@ public:
                 biggerThanZero = true;
                 break;
             case 2:
+            cout << "*3" <<endl;
                 carry = 1;
                 output = '0' + output;
                 biggerThanZero = true;
+                break;
             case 3:
-                carry =1;
+                carry = 1;
                 output = '1' + output;
                 biggerThanZero = true;
                 break;
             }
             bCounter--;
             aCounter--;
+            cout << output << endl;
         }
 
         if(!biggerThanZero) return "";
