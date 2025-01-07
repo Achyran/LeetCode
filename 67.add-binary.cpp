@@ -5,53 +5,50 @@
  */
 
 // @lc code=start
-//#include "headers.h"
+#include "headers.h"
 
 class Solution {
 public:
     string addBinary(string a, string b) {
         int carry = 0;
         
-        string base;
-        string add;
+        int aCounter = a.length()-1;
+        int bCounter = b.length()-1;
+        bool biggerThanZero = false;
+        
+        string output = "";
 
-        if(a.length() > b.length()){
-            base = a;
-            add = b;
-        }else{
-            base = b;
-            add = a;
-        }
-
-        for (int i = base.length()-1; i <= base.length()-add.length(); i--)
+        while (aCount >=0 && bCounter >=0)
         {
             int temp = carry;
-            if(base[i] == '1') temp ++;
-            if(add[ i] == '1') temp ++;
-            cout << "b:"<< base[i] << " a:" << add[i] << "      " << add.length()-1<< "   " <<temp << endl;
+            if(b[bCounter] == '1') temp ++;
+            if(a[aCounter] == '1') temp ++;
+
             switch (temp)
             {
             case 0:
-                base[i] = '0';
+                output = '0' + output ;
                 break;
             case 1:
-                base[i] = '1';
+                output = '1' + output;
+                biggerThanZero = true;
                 break;
             case 2:
                 carry = 1;
-                base[i] = '0';
+                output = '0' + output;
+                biggerThanZero = true;
             case 3:
                 carry =1;
-                base[i] = '1';
+                output = '1' + output;
+                biggerThanZero = true;
                 break;
             }
         }
 
-        if(base.length() == add.length() && carry == 1){
-            base = '1' + base;
-        }
-
-        return base;
+        if(biggerThanZero == false) return "";
+        if(carry == 1) output = '1'+ output;
+        
+        return output;
     }
 };
 // @lc code=end
