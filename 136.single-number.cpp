@@ -5,16 +5,17 @@
  */
 
 // @lc code=start
-#include "headers.h"
+//#include "headers.h"
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
         
         int canidate =  nums[0];
 
-        for (int i = 1; i < nums.size(); i++)
+        for (int i = 1; i < nums.size()-1; i++)
         {
             if(canidate == nums[i]) canidate = nums[i+1];
+            
         }
         
         return canidate;
