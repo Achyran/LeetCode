@@ -21,15 +21,17 @@ public:
         while (aCounter >=0 && bCounter >=0)
         {
             int temp = carry;
-            if(b[bCounter] == '1') temp ++;
-            if(a[aCounter] == '1') temp ++;
+            if(bCounter >= 0 && b[bCounter] == '1') temp ++;
+            if(aCounter >= 0 && a[aCounter] == '1') temp ++;
 
             switch (temp)
             {
             case 0:
+                carry = 0;
                 output = '0' + output ;
                 break;
             case 1:
+                carry = 0;
                 output = '1' + output;
                 biggerThanZero = true;
                 break;
@@ -43,10 +45,15 @@ public:
                 biggerThanZero = true;
                 break;
             }
+            bCounter--;
+            aCounter--;
         }
 
-        if(biggerThanZero == false) return "";
-        if(carry == 1) output = '1'+ output;
+        if(!biggerThanZero) return "";
+        if(carry == 1){
+            output = '1' + output;
+        }
+
         
         return output;
     }
