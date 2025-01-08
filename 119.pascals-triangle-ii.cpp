@@ -10,8 +10,8 @@ class Solution {
 public:
     vector<int> getRow(int rowIndex) {
         
-        if( rowIndex == 1) return {1};
-        if( rowIndex == 2) return {1,1};
+        if( rowIndex == 0) return {1};
+        if( rowIndex == 1) return {1,1};
 
         vector<vector<int>> output = {{1},{1,1}};
 
