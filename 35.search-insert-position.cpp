@@ -14,10 +14,10 @@ public:
         for (int i = 0; i < nums.size(); i++)
         {
             if(nums[i] == target) return i;
-            if(nums[i] > target) return i -1;
+            if(nums[i] > target) return i;
         }
         
-        return nums.size() +1;
+        return nums.size();
     }
 };
 // @lc code=end
