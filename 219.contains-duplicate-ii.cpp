@@ -13,10 +13,14 @@ public:
 
         for (int i = 0; i < nums.size(); i++)
         {
-            /* code */
+            if(map.find(abs(nums[i]-k)) != map.end()){
+                return true;
+            }else{
+                map[nums[i]] = i;
+            }
         }
         
-
+        return false;
     }
 };
 // @lc code=end
