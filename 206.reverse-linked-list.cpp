@@ -15,8 +15,9 @@
       ListNode(int x) : val(x), next(nullptr) {}
       ListNode(int x, ListNode *next) : val(x), next(next) {}
   };
- */
-//#include "headers.h"
+ 
+#include "headers.h"
+*/
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
@@ -32,7 +33,7 @@ public:
             
         }
         while (next != nullptr);
-        
+        current->next = prev;
         return current;
     }
 };
