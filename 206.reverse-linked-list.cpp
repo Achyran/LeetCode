@@ -7,6 +7,7 @@
 // @lc code=start
 
 //  Definition for singly-linked list.
+/*
   struct ListNode {
       int val;
       ListNode *next;
@@ -14,8 +15,8 @@
       ListNode(int x) : val(x), next(nullptr) {}
       ListNode(int x, ListNode *next) : val(x), next(next) {}
   };
- 
-#include "headers.h"
+ */
+//#include "headers.h"
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
