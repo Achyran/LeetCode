@@ -14,10 +14,7 @@ public:
 
      for (int i = matrix.size()-1; i >= 0 ; i--)
      {
-        for (int i = 0; i <matrix[i].size ; i++)
-        {
-            outputMatrix[].push_back()
-        }
+        
         
      }
      
