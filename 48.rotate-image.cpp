@@ -12,11 +12,6 @@ public:
 
      vector<vector<int>>  outputMatrix;
 
-     for (int i = matrix.size()-1; i >= 0 ; i--)
-     {
-        
-        
-     }
      
      
 
