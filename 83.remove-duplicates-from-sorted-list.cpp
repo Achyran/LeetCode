@@ -21,13 +21,15 @@ public:
     ListNode* deleteDuplicates(ListNode* head) {
         
         unordered_map<int,int> map;
-
+        ListNode* output;
         while (head->next != nullptr)
         {
+            ListNode* current = head;
             if(map.find(head->val) != map.end()){
                 map[head->val] = 1;
             }
             else{
+
                 //Remove Element
             }
         }
@@ -35,7 +37,7 @@ public:
         
 
 
-        return head;
+        return output;
     }
 };
 // @lc code=end
