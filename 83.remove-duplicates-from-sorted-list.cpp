@@ -20,18 +20,14 @@ class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
         
-        unordered_map<int,int> map;
-        ListNode* output;
-        while (head->next != nullptr)
-        {
-            ListNode* current = head;
-            if(map.find(head->val) != map.end()){
-                map[head->val] = 1;
-            }
-            else{
+        //Return List with only one element
+        if(head->next == nullptr) return head;
+        
+        ListNode* output = head;
 
-                //Remove Element
-            }
+        while (head != nullptr)
+        {
+           
         }
         
         
