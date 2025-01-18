@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-/**
+/**/
   //Definition for singly-linked list.
   struct ListNode {
       int val;
@@ -20,24 +20,26 @@ class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
         
-        if(head->next == nullptr) return head;
+        if(head != nullptr && head->next == nullptr) return head;
         
         ListNode* output = head;
 
-        while (head->next != nullptr)
+        while (head!= nullptr && head->next != nullptr)
         {
            if(head->val == head->next->val){
                 ListNode* start = head;
-                while (head->val == head->next->val)
+                while (head->next != nullptr && head->val == head->next->val)
                 {
                     head = head->next;
                 }
+                
                 start->next = head->next;
                 head = start;
            }
+           head = head->next;
         }
         
-        return output;
+        return output; 
     }
 };
 // @lc code=end
