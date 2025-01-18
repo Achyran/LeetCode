@@ -24,7 +24,12 @@ public:
 
         while (head->next != nullptr)
         {
-            
+            if(map.find(head->val) != map.end()){
+                map[head->val] = 1;
+            }
+            else{
+                //Remove Element
+            }
         }
         
         
