@@ -28,7 +28,13 @@ public:
         while (head->next != nullptr)
         {
            if(head->val == head->next->val){
-
+                ListNode* start = head;
+                while (head->val == head->next->val)
+                {
+                    head = head->next;
+                }
+                start->next = head->next;
+                head = start;
            }
         }
         
