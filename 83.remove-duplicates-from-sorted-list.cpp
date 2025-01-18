@@ -20,6 +20,16 @@ class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
         
+        unordered_map<int,int> map;
+
+        while (head->next != nullptr)
+        {
+            
+        }
+        
+        
+
+
         return head;
     }
 };
