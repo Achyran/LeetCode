@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-/**/ 
+/**
   //Definition for singly-linked list.
   struct ListNode {
       int val;
@@ -15,12 +15,11 @@
       ListNode(int x, ListNode *next) : val(x), next(next) {}
   };
  /**/
- #include "headers.h"
+ //#include "headers.h"
 class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
         
-        //Return List with only one element
         if(head->next == nullptr) return head;
         
         ListNode* output = head;
@@ -38,9 +37,6 @@ public:
            }
         }
         
-        
-
-
         return output;
     }
 };
