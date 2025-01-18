@@ -25,9 +25,11 @@ public:
         
         ListNode* output = head;
 
-        while (head != nullptr)
+        while (head->next != nullptr)
         {
-           
+           if(head->val == head->next->val){
+
+           }
         }
         
         
