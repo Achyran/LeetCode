@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-/* *
+/* 
 //  Definition for a binary tree node.
   struct TreeNode {
       int val;
@@ -21,24 +21,18 @@
 class Solution {
 public:
     int maxDepth(TreeNode* root) {
-        
-        cout << root->val << endl;
-
-        if(root->left == nullptr && root->right == nullptr) return 1;
-
-        int cLeft = 0;
-        int cRight = 0;
-
-
-        if(root->left != nullptr) cLeft =+ maxDepth(root->left);
-        if(root->right != nullptr) cRight =+ maxDepth(root->right);
-
-        
-
-        return cLeft > cRight ? cLeft : cRight;
-
+    
+        if(root == nullptr){
+            return 0;
+        }
+        return 1 + MaxInt( maxDepth(root->left) , maxDepth(root->right));
 
     }
+private:
+    int MaxInt(int a, int b){
+    if(a > b) return a;
+    return b;
+}
 };
 // @lc code=end
 
