@@ -27,6 +27,9 @@ public:
         int cLeft = 0;
         int cRight = 0;
 
+        if(root->left != nullptr) cLeft = maxDepth(root->left);
+        if(root->right != nullptr) cRight = maxDepth(root->right);
+        
         return 0;
 
 
