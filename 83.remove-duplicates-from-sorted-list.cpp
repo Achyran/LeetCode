@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-/**/
+/*
   //Definition for singly-linked list.
   struct ListNode {
       int val;
