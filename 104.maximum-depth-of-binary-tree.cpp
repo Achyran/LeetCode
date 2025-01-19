@@ -29,8 +29,9 @@ public:
 
         if(root->left != nullptr) cLeft = maxDepth(root->left);
         if(root->right != nullptr) cRight = maxDepth(root->right);
-        
-        return 0;
+
+
+        return cLeft > cRight ? cLeft : cRight;
 
 
     }
