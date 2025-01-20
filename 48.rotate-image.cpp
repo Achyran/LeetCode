@@ -10,8 +10,7 @@ class Solution {
 public:
     void rotate(vector<vector<int>>& matrix) {
 
-        int i curent;
-
+        
      
     }
 };
