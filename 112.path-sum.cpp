@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-/**
+/**/
  // Definition for a binary tree node.
   struct TreeNode {
       int val;
@@ -23,16 +23,25 @@ class Solution {
 public:
     bool hasPathSum(TreeNode* root, int targetSum) {
         
-        if(root == nullptr){
-            if(targetSum = 0 )
+        if(root == nullptr) return false;
+
+        return dfsHasPathSum(root, targetSum);
+        
+    }
+
+private: 
+    bool dfsHasPathSum(TreeNode* root, int targetSum) {
+        
+        if(root.left == nullptr && root){
+            if(targetSum == 0 )
                 return true;
             else 
                 return false;
         } 
 
-        return hasPathSum(root->left,targetSum - root->val) || hasPathSum(root->right, targetSum - root->val);
-        
+        return dfsHasPathSum(root->left,targetSum - root->val) || dfsHasPathSum(root->right, targetSum - root->val);
     }
+
 };
 // @lc code=end
 
