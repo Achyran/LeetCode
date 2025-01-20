@@ -10,15 +10,18 @@ class Solution {
 public:
     int hammingWeight(int n) {
         int res = 0;
-        
+        uint32_t temp = 0;
+
         for (int i = 0; i < 32; i++)
         {
-            res <<= 1;
-            res |= n & 1;
-            n >>= 1;
+            temp <<= 1;
+            temp |= n & 1;
+            if(temp == 1) res ++;
+            temp = 0;
             n >>= 1;
         }
         
+        return res;
     }
 };
 // @lc code=end
