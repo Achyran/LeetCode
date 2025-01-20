@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-/**/
+/**
  // Definition for a binary tree node.
   struct TreeNode {
       int val;
@@ -32,8 +32,10 @@ public:
 private: 
     bool dfsHasPathSum(TreeNode* root, int targetSum) {
         
-        if(root.left == nullptr && root){
-            if(targetSum == 0 )
+        if(root == nullptr) return false;
+        
+        if(root->left == nullptr && root->right == nullptr){
+            if(targetSum == root->val )
                 return true;
             else 
                 return false;
