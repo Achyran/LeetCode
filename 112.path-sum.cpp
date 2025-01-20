@@ -16,6 +16,9 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+
+#include "headers.h"
+
 class Solution {
 public:
     bool hasPathSum(TreeNode* root, int targetSum) {
