@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-#include "headers.h"
+//#include "headers.h"
 class Solution {
 public:
     bool canJump(vector<int>& nums) {
