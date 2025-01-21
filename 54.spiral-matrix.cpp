@@ -31,18 +31,16 @@ public:
             for(int i = right; i >= left; i --){
                 result.push_back(matrix[bottom][i]);
             }
-            bottom ++;
+            bottom --;
 
             for(int i = bottom; i >= top; i --){
                 result.push_back(matrix[i][left]);
             }
             
-            
-            
-            
-            
+            left ++;
         }
         
+        return result;
 
     }
 };
