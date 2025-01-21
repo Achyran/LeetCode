@@ -17,6 +17,8 @@ public:
                 gool = i;
             }
         }
+
+        return gool == 0;
         
 
     }
