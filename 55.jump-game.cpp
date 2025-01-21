@@ -5,9 +5,11 @@
  */
 
 // @lc code=start
+#include "headers.h"
 class Solution {
 public:
     bool canJump(vector<int>& nums) {
+        int gool = nums.size()-1;
         
     }
 };
