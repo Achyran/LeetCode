@@ -22,10 +22,10 @@ public:
                 result.push_back(matrix[top][i]);
             }
             top ++;
-            /**
+            /**/
             for (int i = top; i < bottom; i++)
             {
-                result.push_back(matrix[i][right]);
+                result.push_back(matrix[i][right-1]);
             }
             right --;
             /**
