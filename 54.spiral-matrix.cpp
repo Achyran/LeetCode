@@ -28,7 +28,7 @@ public:
                 result.push_back(matrix[i][right]);
             }
             right --;
-            /**
+            /**/
             for(int i = right-1; i >= left; i --){
                 result.push_back(matrix[bottom][i]);
             }
