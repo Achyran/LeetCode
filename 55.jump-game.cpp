@@ -20,7 +20,6 @@ public:
 
         return gool == 0;
         
-
     }
 };
 // @lc code=end
