@@ -9,9 +9,10 @@
 class Solution {
 public:
     vector<int> spiralOrder(vector<vector<int>>& matrix) {
-        int m = matrix.size();
-        int n = matrix[0].size();
-        vector<int> output;
+        int left = 0;
+        int right = matrix.size()-1;
+        int top = 0;
+        int bottom = matrix[0].size()-1;
 
         while ()
         {
