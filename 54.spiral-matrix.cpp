@@ -15,8 +15,8 @@ public:
         int bottom = matrix.size()-1;
         vector<int> result;
 
-        //while (left < right && top < bottom)
-        //{
+        while (left <= right && top <= bottom)
+        {
             for (int i = left ; i <= right ; i++)
             {
                 result.push_back(matrix[top][i]);
@@ -29,19 +29,25 @@ public:
             }
             right --;
             /**/
-            for(int i = right-1; i >= left; i --){
+            if(top <= bottom){
+
+            for(int i = right; i >= left; i --){
                 result.push_back(matrix[bottom][i]);
             }
             bottom --;
+            }
             /**/
+            if(left <=right){
+
             for(int i = bottom; i >= top; i --){
 
                 result.push_back(matrix[i][left]);
             }
             
             left ++;
+            }
             /**/
-        //}
+        }
         
         return result;
 
