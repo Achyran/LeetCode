@@ -33,8 +33,9 @@ public:
                 result.push_back(matrix[bottom][i]);
             }
             bottom --;
-            /**
-            for(int i = bottom-1; i >= top; i --){
+            /**/
+            for(int i = bottom; i >= top; i --){
+
                 result.push_back(matrix[i][left]);
             }
             
