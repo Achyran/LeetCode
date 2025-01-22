@@ -10,8 +10,8 @@ class Solution {
 public:
     int divide(int dividend, int divisor) {
 
-        
-        
+        bool negativ =  !isNegativ(dividend) != !isNegativ(divisor);
+
         int counter = 0;
         while(dividend> divisor ){
             dividend -= divisor;
@@ -22,7 +22,7 @@ public:
 
 private:
     bool isNegativ(int numb){
-        numb >>= 31;
+        numb = numb >> 31;
         return numb;
     }
 };
