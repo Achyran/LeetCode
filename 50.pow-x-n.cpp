@@ -8,7 +8,18 @@
 class Solution {
 public:
     double myPow(double x, int n) {
+        if(n == 0) return 1;
         
+        if(n > 0 ){
+            for (int i = 0; i < n; i++)
+            {
+                cout << x<< endl;
+                x =x * x;
+            }
+            return x;
+        }
+
+        return 0;
     }
 };
 // @lc code=end
