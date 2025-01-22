@@ -12,6 +12,10 @@ public:
 
         bool negativ =  !isNegativ(dividend) != !isNegativ(divisor);
 
+        dividend = abs(dividend);
+        divisor = abs(divisor);
+        
+
         int counter = 0;
         while(dividend> divisor ){
             dividend -= divisor;
