@@ -10,12 +10,20 @@ class Solution {
 public:
     int divide(int dividend, int divisor) {
 
+        
+        
         int counter = 0;
         while(dividend> divisor ){
             dividend -= divisor;
             counter ++;
         }
         return counter;
+    }
+
+private:
+    bool isNegativ(int numb){
+        numb >>= 31;
+        return numb;
     }
 };
 // @lc code=end
