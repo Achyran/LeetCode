@@ -10,6 +10,9 @@ class Solution {
 public:
     int climbStairs(int n) {
         
+        int steps[n];
+
+
     }
 };
 // @lc code=end
