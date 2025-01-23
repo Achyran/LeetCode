@@ -19,7 +19,7 @@ public:
 
         for (int i = n-3; i >= 0; i--)
         {
-            /* code */
+            steps[i] = step[i +1] + steps[i+2];
         }
         
 
