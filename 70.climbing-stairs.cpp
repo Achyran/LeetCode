@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-#include "headers.h"
+//#include "headers.h"
 class Solution {
 public:
     int climbStairs(int n) {
@@ -23,13 +23,7 @@ public:
         }
         
 
-        return steps[0]
-
-
-
-
-
-
+        return steps[0];
     }
 };
 // @lc code=end
