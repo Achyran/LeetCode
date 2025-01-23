@@ -14,9 +14,14 @@ public:
         if(n == 2) return 2;
 
         int steps[n];
-        steps[steps.size()-1] = 1;
-        steps[steps.size()-2] = 1;
+        steps[n-1] = 1;
+        steps[n-2] = 1;
 
+        for (int i = n-3; i >= 0; i--)
+        {
+            /* code */
+        }
+        
 
 
 
