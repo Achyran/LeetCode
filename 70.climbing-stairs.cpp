@@ -12,7 +12,12 @@ public:
 
         if(n == 1) return 1;
         if(n == 2) return 2;
+
         int steps[n];
+        steps[steps.size()-1] = 1;
+        steps[steps.size()-2] = 1;
+
+
 
 
 
