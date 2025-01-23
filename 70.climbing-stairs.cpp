@@ -10,20 +10,18 @@ class Solution {
 public:
     int climbStairs(int n) {
 
-        if(n == 1) return 1;
-        if(n == 2) return 2;
+        int one = 1;
+        int two = 1;
 
-        int steps[n] ;
-        steps[n-1] = 1;
-        steps[n-2] = 1;
-
-        for (int i = n-3; i >= 0; i--)
+        for (int i = n-1; i > 0; i--)
         {
-            steps[i] = steps[i +1] + steps[i+2];
+            int temp = one;
+            one = one + two;
+            two = temp;
         }
         
 
-        return steps[0];
+        return one;
     }
 };
 // @lc code=end
