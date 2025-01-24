@@ -5,12 +5,12 @@
  */
 
 // @lc code=start
-//#include "headers.h"
+#include "headers.h"
 class Solution {
 public:
     string countAndSay(int n) {
         
-        if(n = 1) return "1";
+        if(n == 1) return "1";
 
         return REL(countAndSay(n-1));
     }
@@ -27,13 +27,13 @@ private:
             if(cur == n[i]){
                 count ++;
             }else{
-                output = output + (char) count + cur ;
+                output = output + to_string(count) + cur ;
                 cur = n[i];
                 count = 1;
             }
         }
-        output = output + (char) count + cur ;
-
+        cout <<count;
+        output = output + to_string(count) + cur ;
         return output;
     }
 
