@@ -16,7 +16,10 @@ public:
     }
 private:
     string REL(string n){
+        if(n == "") return "";
 
+        char cur;
+        int count = 1;
     }
 
 };
