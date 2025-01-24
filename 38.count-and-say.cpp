@@ -12,7 +12,7 @@ public:
         
         if(n = 1) return "1";
 
-        return "test ";
+        return REL(countAndSay(n-1));
     }
 private:
     string REL(string n){
