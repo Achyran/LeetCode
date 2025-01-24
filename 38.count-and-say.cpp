@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-#include "headers.h"
+//#include "headers.h"
 class Solution {
 public:
     string countAndSay(int n) {
@@ -22,7 +22,7 @@ private:
         int count = 1;
         string output = "";
 
-        for (int i = 0; i < n.size(); i++)
+        for (int i = 1; i < n.size(); i++)
         {
             if(cur == n[i]){
                 count ++;
@@ -32,7 +32,7 @@ private:
                 count = 1;
             }
         }
-        cout <<count;
+        cout <<output << endl;
         output = output + to_string(count) + cur ;
         return output;
     }
