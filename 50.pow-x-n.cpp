@@ -8,18 +8,24 @@
 class Solution {
 public:
     double myPow(double x, int n) {
-        if(n == 0) return 1;
-        
-        if(n > 0 ){
-            for (int i = 0; i < n; i++)
-            {
-                cout << x<< endl;
-                x =x * x;
-            }
-            return x;
-        }
 
-        return 0;
+        
+     
+        return Pow(x,n);
+    }
+private:
+    double Pow(double x, int n){
+        if (x == 0) return 0;
+        if (n == 0) return 1;
+
+        double res = Pow(x,n/2);
+        cout << n << endl;
+        res = res * res;
+        if(n/2 == 0){
+            return res;
+        }else{
+            return x * res;
+        }
     }
 };
 // @lc code=end
