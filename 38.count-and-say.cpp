@@ -10,6 +10,16 @@ class Solution {
 public:
     string countAndSay(int n) {
         
+        if(n = 1) return "1";
+
+        return 
+
+    }
+private:
+    string RLE(string n){
+        char cur;
+        string output = "";
+        
     }
 };
 // @lc code=end
