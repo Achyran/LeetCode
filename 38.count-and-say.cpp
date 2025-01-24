@@ -18,8 +18,23 @@ private:
     string REL(string n){
         if(n == "") return "";
 
-        char cur;
+        char cur = n[0];
         int count = 1;
+        string output = "";
+
+        for (int i = 0; i < n.size(); i++)
+        {
+            if(cur == n[i]){
+                count ++;
+            }else{
+                output = output + (char) count + cur ;
+                cur = n[i];
+                coutn = 1;
+            }
+        }
+        
+
+
     }
 
 };
