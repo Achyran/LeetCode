@@ -5,16 +5,20 @@
  */
 
 // @lc code=start
-//#include "headers.h"
+#include "headers.h"
 class Solution {
 public:
     string countAndSay(int n) {
         
         if(n = 1) return "1";
 
-        return "";
+        return "test ";
+    }
+private:
+    string REL(string n){
 
     }
+
 };
 // @lc code=end
 
