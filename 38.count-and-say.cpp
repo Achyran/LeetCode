@@ -29,12 +29,12 @@ private:
             }else{
                 output = output + (char) count + cur ;
                 cur = n[i];
-                coutn = 1;
+                count = 1;
             }
         }
-        
+        output = output + (char) count + cur ;
 
-
+        return output;
     }
 
 };
