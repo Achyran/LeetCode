@@ -24,7 +24,7 @@ public:
     }
 private:
     int getHeight(TreeNode* root){
-        
+        if(root = nullptr) return 0;
     }
 };
 // @lc code=end
