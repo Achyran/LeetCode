@@ -20,7 +20,7 @@
 class Solution {
 public:
     bool isBalanced(TreeNode* root) {
-        
+        return getHeight(root) != -1;
     }
 private:
     int getHeight(TreeNode* root){
