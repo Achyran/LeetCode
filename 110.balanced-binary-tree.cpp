@@ -5,6 +5,7 @@
  */
 
 // @lc code=start
+#include "headers.h"
 /**/
  //Definition for a binary tree node.
   struct TreeNode {
@@ -19,6 +20,10 @@
 class Solution {
 public:
     bool isBalanced(TreeNode* root) {
+        
+    }
+private:
+    int getHeight(TreeNode* root){
         
     }
 };
