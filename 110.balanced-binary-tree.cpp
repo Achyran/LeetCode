@@ -29,8 +29,9 @@ private:
         int left = getHeight(root->left);
         int right = getHeight(root->right);
 
-        if(left == -1 || right == -1 || abs(left- right) > 1) return -1
-    
+        if(left == -1 || right == -1 || abs(left- right) > 1) return -1;
+
+        return max(left,right) + 1;
     }
 };
 // @lc code=end
