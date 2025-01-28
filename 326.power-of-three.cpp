@@ -15,6 +15,7 @@ public:
             if(n%1 != 0) return false;
             n = n/3;
         }
+        return true;
         
     }
 };
