@@ -13,7 +13,7 @@ public:
         while (n >=2)
         {
             if(n%1 != 0) return false;
-            
+            n = n/3;
         }
         
     }
