@@ -12,7 +12,8 @@ public:
         
         while (n >=2)
         {
-            /* code */
+            if(n%1 != 0) return false;
+            
         }
         
     }
