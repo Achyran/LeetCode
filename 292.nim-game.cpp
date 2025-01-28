@@ -5,6 +5,7 @@
  */
 
 // @lc code=start
+#include "headers.h"
 class Solution {
 public:
     bool canWinNim(int n) {
