@@ -5,9 +5,15 @@
  */
 
 // @lc code=start
+#include "headers.h"
 class Solution {
 public:
     bool isPowerOfThree(int n) {
+        
+        while (n >=2)
+        {
+            /* code */
+        }
         
     }
 };
