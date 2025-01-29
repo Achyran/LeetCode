@@ -28,7 +28,7 @@ private:
             n = n/10;
         }
 
-        
+        return isHappyHelper(n,map);
         
         
     }
