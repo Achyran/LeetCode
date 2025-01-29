@@ -14,7 +14,7 @@ public:
     }
 
 private:
-    bool isHappyHeler(int n, unordered_map<int,int> map){
+    bool isHappyHelper(int n, unordered_map<int,int> map){
 
     }
 
