@@ -15,7 +15,8 @@ public:
 
 private:
     bool isHappyHelper(int n, unordered_map<int,int> map){
-
+        if(n == 1) return true;
+        
     }
 
 
