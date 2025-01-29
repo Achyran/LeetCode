@@ -13,7 +13,10 @@ public:
         
     }
 
-
+public:
+    bool isHappyHeler(int n, unordered_map<int,int> map){
+        
+    }
 
 
 };
