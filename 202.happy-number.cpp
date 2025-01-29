@@ -6,12 +6,14 @@
 
 // @lc code=start
 
-
+#include "headers.h"
 class Solution {
 public:
     bool isHappy(int n) {
         
     }
+
+
 
 
 };
