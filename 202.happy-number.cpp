@@ -12,14 +12,16 @@ public:
     bool isHappy(int n) {
         unordered_map<int,int> map;
 
-        return isHappyHelper(n,map)
+        return isHappyHelper(n, map);
         
     }
 
 private:
-    bool isHappyHelper(int n, unordered_map<int,int>* map){
+    bool isHappyHelper(int n, unordered_map<int,int>& map){
+       
         if(n == 1) return true;
-        if(map->find(n) != map->end()) return false;
+        if(map.find(n) != map.end()) return false;
+        map[n] = n;
         int m = 0;
         while (n > 0)
         {
@@ -27,8 +29,7 @@ private:
             m += a * a;
             n = n/10;
         }
-
-        return isHappyHelper(n,map);
+        return isHappyHelper(m,map);
     }
 
 
