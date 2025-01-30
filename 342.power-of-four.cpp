@@ -10,9 +10,9 @@ class Solution {
 public:
     bool isPowerOfFour(int n) {
         
-        while (n > 4)
+        while (n >= 4)
         {
-            /* code */
+            if(n%4 != 0) return false;
         }
         
     }
