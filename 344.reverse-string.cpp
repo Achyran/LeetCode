@@ -13,7 +13,8 @@ public:
         for (int i = 0; i < s.size()/2; i++)
         {
             char first = s[i];
-            char last = s[s.size()-1];
+            char last = s[s.size()-1 - i];
+
         }
         
     }
