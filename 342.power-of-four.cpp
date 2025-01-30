@@ -10,6 +10,11 @@ class Solution {
 public:
     bool isPowerOfFour(int n) {
         
+        while (n > 4)
+        {
+            /* code */
+        }
+        
     }
 };
 // @lc code=end
