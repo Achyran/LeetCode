@@ -14,8 +14,10 @@ public:
         {
             char first = s[i];
             char last = s[s.size()-1 - i];
-
+            s[i] = last;
+            s[s.size() -1 -i] = first;
         }
+
         
     }
 };
