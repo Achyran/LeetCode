@@ -32,7 +32,7 @@ public:
             }
 
         }
-        
+        return s;
     }
 private:
     bool IsVowel(char n){
