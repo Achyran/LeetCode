@@ -15,8 +15,17 @@ public:
         while (right >= left)
         {
             if(IsVowel( s[right]) && IsVowel(s[left]) ){
-                //Switch;
+                //Switch and progress ponters;
             }
+            else {
+                if(!IsVowel(s[right])){
+                    right ++;
+                }
+                if(!IsVowel(s[left])){
+                    left ++;
+                }
+            }
+
         }
         
     }
