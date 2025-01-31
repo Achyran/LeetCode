@@ -12,7 +12,7 @@ public:
         int right = 0;
         int left = s.size() -1;
 
-        while (right >= left)
+        while (right <= left)
         {
             if(IsVowel( s[right]) && IsVowel(s[left]) ){
                 //Switch and progress ponters;
