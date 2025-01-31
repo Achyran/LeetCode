@@ -5,6 +5,7 @@
  */
 
 // @lc code=start
+#include "headers.h"
 class Solution {
 public:
     string reverseVowels(string s) {
