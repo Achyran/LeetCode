@@ -16,6 +16,11 @@ public:
         {
             if(IsVowel( s[right]) && IsVowel(s[left]) ){
                 //Switch and progress ponters;
+                char temp = s[right];
+                s[right] = s[left];
+                s[left] = temp;
+                right ++;
+                left --;
             }
             else {
                 if(!IsVowel(s[right])){
