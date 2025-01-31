@@ -27,7 +27,7 @@ public:
                     right ++;
                 }
                 if(!IsVowel(s[left])){
-                    left ++;
+                    left --;
                 }
             }
 
