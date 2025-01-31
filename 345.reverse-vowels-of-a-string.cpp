@@ -14,7 +14,9 @@ public:
 
         while (right >= left)
         {
-            
+            if(IsVowel( s[right]) && IsVowel(s[left]) ){
+                //Switch;
+            }
         }
         
     }
