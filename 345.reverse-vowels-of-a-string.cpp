@@ -11,6 +11,12 @@ public:
     string reverseVowels(string s) {
         int right = 0;
         int left = s.size() -1;
+
+        while (right >= left)
+        {
+            
+        }
+        
     }
 };
 // @lc code=end
