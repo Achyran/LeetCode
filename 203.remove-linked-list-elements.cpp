@@ -19,6 +19,8 @@
 class Solution {
 public:
     ListNode* removeElements(ListNode* head, int val) {
+        ListNode* start = head;
+        return start;
         
     }
 };
