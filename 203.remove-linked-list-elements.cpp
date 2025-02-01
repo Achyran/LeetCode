@@ -20,6 +20,16 @@ class Solution {
 public:
     ListNode* removeElements(ListNode* head, int val) {
         ListNode* start = head;
+
+        while (head != nullptr)
+        {
+            if (head->val == val){
+                
+            }
+        }
+        
+
+
         return start;
         
     }
