@@ -36,7 +36,6 @@ public:
             if (head->val == val){
                 prev->next = head->next;
             }
-            cout << prev->val;
             prev = head;
             head = head->next;
 
