@@ -34,6 +34,7 @@ public:
         while (head != nullptr)
         {
             if (head->val == val){
+                cout << head->val;
                 prev->next = head->next;
             }
             prev = head;
