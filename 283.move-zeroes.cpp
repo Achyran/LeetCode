@@ -5,21 +5,13 @@
  */
 
 // @lc code=start
-//#include "headers.h"
+#include "headers.h"
 class Solution {
 public:
     void moveZeroes(vector<int>& nums) {
 
-        for (int i = 0; i < nums.size(); i++)
-        {
-            if(nums[i] == 0){
-                for(int j = i; j < nums.size()-1; j++){
-                    nums[j] = nums[j +1];
-                    nums[j+1] = 0;
-
-                }
-            }
-        }
+        int left = 0;
+        int right = nums.size();
         
         
     }
