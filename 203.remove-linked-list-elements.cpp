@@ -21,6 +21,13 @@ public:
     ListNode* removeElements(ListNode* head, int val) {
         
         if(head == nullptr) return nullptr;
+
+        while (head != nullptr && head->val == val)
+        {
+            cout << "called it" << endl;
+            head = head->next;
+        }
+        
         ListNode* start = head;
         ListNode* prev = head;
 
@@ -29,12 +36,10 @@ public:
             if (head->val == val){
                 prev->next = head->next;
             }
+            prev = head;
             head = head->next;
 
         }
-        
-
-
         return start;
         
     }
