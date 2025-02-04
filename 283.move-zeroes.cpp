@@ -15,8 +15,10 @@ public:
 
         while (true)
         {
-            if(nums[right] == 0){
-                nums[right] =
+            if(nums[right] != 0){
+                right++;
+            }else{
+                
             }
         }
         
