@@ -13,18 +13,17 @@ public:
         int left = 0;
         int right = 0;
 
-        while (true)
+        while ()
         {
             if(nums[right] != 0){
                 right++;
             }else{
-                left ++;
                 while (nums[left] != 0)
                 {
                     left ++;
                 }
                 nums[right] = nums[left];
-
+                nums[left] = 0;
             }
         }
         
