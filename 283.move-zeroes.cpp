@@ -5,26 +5,31 @@
  */
 
 // @lc code=start
-//#include "headers.h"
+#include "headers.h"
 class Solution {
 public:
     void moveZeroes(vector<int>& nums) {
 
         int left = 0;
-        int right = 0;
         
-        while (left < nums.size())
+        while (nums[left] == 0)
         {
-            if(nums[right] != 0){
-                right++;
-            }else{
-                while (nums[left] != 0)
-                {
-                    cout<<left<<endl;
-                    left ++;
-                }
+            left++;
+            if(left < nums.size()) return;
+        }
+        
+
+        for (int right = 0; right < nums.size(); right++)
+        {
+            if(nums[right] == 0){
                 nums[right] = nums[left];
                 nums[left] = 0;
+
+                while (nums[left] == 0)
+                {
+                    left++;
+                    if(left < nums.size()) return;
+                }
             }
         }
         
