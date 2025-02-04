@@ -18,7 +18,13 @@ public:
             if(nums[right] != 0){
                 right++;
             }else{
-                
+                left ++;
+                while (nums[left] != 0)
+                {
+                    left ++;
+                }
+                nums[right] = nums[left];
+
             }
         }
         
