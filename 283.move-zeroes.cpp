@@ -11,12 +11,12 @@ public:
     void moveZeroes(vector<int>& nums) {
 
         int left = 0;
-        int right = nums.size() -1;
+        int right = 0;
 
-        while (left < right)
+        while (true)
         {
-            if(nums[left] == 0){
-                
+            if(nums[right] == 0){
+                nums[right] =
             }
         }
         
