@@ -20,6 +20,7 @@ public:
             }else{
                 while (nums[left] != 0)
                 {
+                    cout<<left<<endl;
                     left ++;
                 }
                 nums[right] = nums[left];
