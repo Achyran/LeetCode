@@ -9,7 +9,16 @@
 class Solution {
 public:
     vector<vector<int>> permute(vector<int>& nums) {
-        if(nums.size() == 1) return {  };
+        if(nums.size() == 1) return { nums };
+
+        vector<vector<int>> output;
+        for(int i =0; i < nums.size(); i++){
+            vector<int> redusced = removeX(nums[i],nums);
+            vector<vector<int>> permute = helper(nums[i],nums);
+            Combine(output,permute);
+        }
+
+        return output;
 
         
     }
@@ -20,8 +29,10 @@ private:
         vector<vector<int>> output;
         for(int i = 0; i < nums.size(); i++){
             vector<int> redusced = removeX(nums[i],nums);
-            helper(nums[i], redusced);
+            vector<vector<int>> permute = helper(nums[i],nums);
+            Combine(output, permute);
         }
+        return output;
     }
 
     vector<int> removeX (int x ,vector<int>& nums){
@@ -30,6 +41,16 @@ private:
             if(nums[x] != x) output.push_back(nums[i]);
         }
         return output;
+    }
+
+    vector<vector<int>>& Combine(vector<vector<int>>& a, vector<vector<int>>& b)
+    {
+        for(int j = 0; j < b.size(); j ++)
+        {
+            a.push_back(b[j]);
+        }
+
+        return a;
     }
     
 };
