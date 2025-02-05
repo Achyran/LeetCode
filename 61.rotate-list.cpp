@@ -5,8 +5,8 @@
  */
 
 // @lc code=start
-#include "headers.h"
-/** */
+//#include "headers.h"
+/** *
  // Definition for singly-linked list.
   struct ListNode {
       int val;
@@ -20,13 +20,28 @@ class Solution {
 public:
     ListNode* rotateRight(ListNode* head, int k) {
         ListNode* start = head;
-
+        int amount = 1;
         
         while (head->next != nullptr)
         {
+            amount ++;
             head = head->next;
         }
         head->next = start;
+        
+        k = k % amount;
+        amount = amount -k;
+        ListNode* prev;
+        while (amount >= 0)
+        {
+            amount --;
+            prev = head;
+            head = head->next;
+        }
+        
+        prev->next = nullptr;
+        
+        return head;
         
 
     }
