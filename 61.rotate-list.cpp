@@ -19,7 +19,16 @@
 class Solution {
 public:
     ListNode* rotateRight(ListNode* head, int k) {
+        ListNode* start = head;
+
         
+        while (head->next != nullptr)
+        {
+            head = head->next;
+        }
+        head->next = start;
+        
+
     }
 };
 // @lc code=end
