@@ -9,11 +9,14 @@
 class Solution {
 public:
     vector<vector<int>> permute(vector<int>& nums) {
-        if(nums.size() == 1) return { nums };
+        if(nums.size() == 1) return {  };
 
         
     }
-
+private:
+    vector<vector<int>> helper(int x, vector<int>& nums){
+        if(nums.size() == 1) return { {x,nums[0]} };
+    }
     
 };
 // @lc code=end
