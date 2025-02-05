@@ -9,8 +9,12 @@
 class Solution {
 public:
     vector<vector<int>> permute(vector<int>& nums) {
+        if(nums.size() == 1) return { nums };
+
         
     }
+
+    
 };
 // @lc code=end
 
