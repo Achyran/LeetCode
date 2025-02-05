@@ -17,8 +17,10 @@ private:
     vector<vector<int>> helper(int x, vector<int>& nums){
         if(nums.size() == 1) return { {x,nums[0]} };
 
+        vector<vector<int>> output;
         for(int i = 0; i < nums.size(); i++){
-            helper(nums[i], )
+            vector<int> redusced = removeX(nums[i],nums);
+            helper(nums[i], redusced);
         }
     }
 
