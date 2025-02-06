@@ -37,14 +37,10 @@ public:
             break;
         }
 
-        return ans + sign * num;
 
+        }
+    return ans + sign * num;
     }
-
-
-    }
-
-    
 };
 // @lc code=end
 
