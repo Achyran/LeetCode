@@ -18,14 +18,19 @@ public:
     for(int i = 0; i < s.size(); i ++){
         switch (s[i])
         {
-        case constant expression:
-            /* code */
+        case '(':
+            stack.push(sign);
             break;
-        
+        case ')':
+            stack.pop();
+            break;
+        case '+':
+        case '-':
+            ans += sign * num;
+            break;
         default:
             if(isdigit(sign[i])){
                 num = num * 10 + (sign[i] - '0');
-                
             }
             break;
         }
