@@ -15,6 +15,10 @@ public:
 
     stack<int> stack {{sign}};
 
+    for(int i = 0; i < s.size(); i ++){
+        
+    }
+
 
     }
 
