@@ -16,7 +16,17 @@ public:
     stack<int> stack {{sign}};
 
     for(int i = 0; i < s.size(); i ++){
+        switch (s[i])
+        {
+        case constant expression:
+            /* code */
+            break;
         
+        default:
+            if(isdigit(c))
+            break;
+        }
+
     }
 
 
