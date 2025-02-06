@@ -10,6 +10,7 @@ class Solution {
 public:
     int calculate(string s) {
     int ans = 0;
+    int num = 0;
     
 
 
