@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-#include"headers.h"
+//#include"headers.h"
 class Solution {
 public:
     int calculate(string s) {
@@ -27,13 +27,17 @@ public:
         case '+':
         case '-':
             ans += sign * num;
+            sign = (s[i] == '+'? 1 : -1) * stack.top();
+            num = 0;
             break;
         default:
-            if(isdigit(sign[i])){
-                num = num * 10 + (sign[i] - '0');
+            if(isdigit(s[i])){
+                num = num * 10 + (s[i] - '0');
             }
             break;
         }
+
+        return ans + sign * num;
 
     }
 
