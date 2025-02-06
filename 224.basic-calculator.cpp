@@ -11,7 +11,9 @@ public:
     int calculate(string s) {
     int ans = 0;
     int num = 0;
-    int sing = 1;
+    int sign = 1;
+
+    stack<int> stack {{sign}};
 
 
     }
