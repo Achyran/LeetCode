@@ -23,7 +23,9 @@ public:
             break;
         
         default:
-            if(isdigit(c))
+            if(isdigit(sign[i])){
+                
+            }
             break;
         }
 
