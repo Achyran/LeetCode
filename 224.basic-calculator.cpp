@@ -24,6 +24,7 @@ public:
         
         default:
             if(isdigit(sign[i])){
+                num = num * 10 + (sign[i] - '0');
                 
             }
             break;
