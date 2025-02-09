@@ -33,15 +33,19 @@ public:
     }
 private:
     void HandleFilename(vector<string>& pathVector, string s){
+        
         if(s == "..") {
-            pathVector.pop_back();
-        } 
+            if(pathVector.size() != 0)
+                pathVector.pop_back();
+        } else
         if(s != "." 
         && s != ""){
             pathVector.push_back(s);
         }
     }
     string FormatPath(vector<string>& pathVector){
+        if(pathVector.size() == 0) return "/";
+
         string output = "/";
         for (int i = 0; i < pathVector.size(); i++)
         {
