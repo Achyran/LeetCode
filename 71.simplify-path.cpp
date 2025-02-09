@@ -18,21 +18,25 @@ public:
         for (int i = 0; i < path.size(); i++)
         {
             if(path[i] == '/'){
-                if(tempFileName == "..") {
-                    pathVector.erase(pathVector.begin(), pathVector.begin() + pathVector.size()-1);
-                } 
-                if(tempFileName != "." 
-                || tempFileName != ""){
-                    pathVector.push_back(tempFileName);
-                }
+                HandleFilename(pathVector, tempFileName);
                 tempFileName = "";
             }else{
                 tempFileName += path[i];
             }
         }
-        if(tempFileName != "");
+        if(tempFileName != "") HandleFilename(pathVector, tempFileName);
 
         
+    }
+private:
+    void HandleFilename(vector<string>& pathVector, string s){
+        if(s == "..") {
+            pathVector.erase(pathVector.begin(), pathVector.begin() + pathVector.size()-1);
+        } 
+        if(s != "." 
+        || s != ""){
+            pathVector.push_back(s);
+        }
     }
 
 };
