@@ -27,12 +27,14 @@ public:
         if(tempFileName != "") 
             HandleFilename(pathVector, tempFileName);
 
+        return FormatPath(pathVector);
+
         
     }
 private:
     void HandleFilename(vector<string>& pathVector, string s){
         if(s == "..") {
-            pathVector.erase(pathVector.begin(), pathVector.begin() + pathVector.size()-1);
+            pathVector.pop_back();
         } 
         if(s != "." 
         || s != ""){
@@ -43,9 +45,11 @@ private:
         string output = "/";
         for (int i = 0; i < pathVector.size(); i++)
         {
-            
+            output += pathVector[i];
+            output += "/";
         }
-        
+        output.pop_back();
+        return output;
     }
 
 };
