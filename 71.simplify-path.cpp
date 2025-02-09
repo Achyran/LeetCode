@@ -15,7 +15,11 @@ public:
         for (int i = 0; i < path.size(); i++)
         {
             if(path[i] == '/'){
-                // dot stack stuff
+                if(tempFileName == "..") stack.pop();
+                if(tempFileName != "." 
+                || tempFileName != "") stack.push(tempFileName);
+            }else{
+                tempFileName += path[i];
             }
         }
         
