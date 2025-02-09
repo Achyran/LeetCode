@@ -9,7 +9,7 @@
 class Solution {
 public:
     string simplifyPath(string path) {
-        
+        stack<string> stack;
     }
 };
 // @lc code=end
