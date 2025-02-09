@@ -6,25 +6,36 @@
 
 // @lc code=start
 #include "headers.h"
+
+struct LinkedNode
+{
+    public:
+        int data;
+        LinkedNode* next;
+};
+
+
 class Solution {
 public:
     string simplifyPath(string path) {
-        stack<string> stack;
+        
+
+        
         string tempFileName = "";
         
         for (int i = 0; i < path.size(); i++)
         {
             if(path[i] == '/'){
-                if(tempFileName == "..") stack.pop();
+                if(tempFileName == "..") ;
                 if(tempFileName != "." 
-                || tempFileName != "") stack.push(tempFileName);
+                || tempFileName != "") ;
                 tempFileName = "";
             }else{
                 tempFileName += path[i];
             }
         }
 
-        
+
         
     }
 };
