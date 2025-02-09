@@ -37,7 +37,7 @@ private:
             pathVector.pop_back();
         } 
         if(s != "." 
-        || s != ""){
+        && s != ""){
             pathVector.push_back(s);
         }
     }
