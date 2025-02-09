@@ -10,6 +10,7 @@ class Solution {
 public:
     string simplifyPath(string path) {
         stack<string> stack;
+        string tempFileName = "";
     }
 };
 // @lc code=end
