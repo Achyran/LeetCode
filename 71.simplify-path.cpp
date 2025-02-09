@@ -12,7 +12,6 @@ public:
     string simplifyPath(string path) {
         
         vector<string> pathVector;
-
         string tempFileName = "";
         
         for (int i = 0; i < path.size(); i++)
@@ -24,7 +23,9 @@ public:
                 tempFileName += path[i];
             }
         }
-        if(tempFileName != "") HandleFilename(pathVector, tempFileName);
+        
+        if(tempFileName != "") 
+            HandleFilename(pathVector, tempFileName);
 
         
     }
@@ -37,6 +38,14 @@ private:
         || s != ""){
             pathVector.push_back(s);
         }
+    }
+    string FormatPath(vector<string>& pathVector){
+        string output = "/";
+        for (int i = 0; i < pathVector.size(); i++)
+        {
+            
+        }
+        
     }
 
 };
