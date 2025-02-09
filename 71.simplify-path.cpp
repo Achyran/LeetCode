@@ -11,6 +11,7 @@ class Solution {
 public:
     string simplifyPath(string path) {
         
+        vector<string> pathVector;
 
         string tempFileName = "";
         
@@ -18,19 +19,22 @@ public:
         {
             if(path[i] == '/'){
                 if(tempFileName == "..") {
-                    
+                    pathVector.erase(pathVector.begin(), pathVector.begin() + pathVector.size()-1);
                 } 
                 if(tempFileName != "." 
-                || tempFileName != "") ;
+                || tempFileName != ""){
+                    pathVector.push_back(tempFileName);
+                }
                 tempFileName = "";
             }else{
                 tempFileName += path[i];
             }
         }
-
+        if(tempFileName != "");
 
         
     }
+
 };
 // @lc code=end
 
