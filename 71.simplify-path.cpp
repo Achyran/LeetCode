@@ -18,10 +18,13 @@ public:
                 if(tempFileName == "..") stack.pop();
                 if(tempFileName != "." 
                 || tempFileName != "") stack.push(tempFileName);
+                tempFileName = "";
             }else{
                 tempFileName += path[i];
             }
         }
+
+        
         
     }
 };
