@@ -12,9 +12,12 @@ public:
         if(prices.size() == 0 ) return 0;
         int profit = 0;
         int buyprice = prices[0];
-        for (int i = 1; i < prices.size(); i++)
+        bool isHolding = false;
+        for (int i = 1; i < prices.size()-1; i++)
         {
-            /* code */
+            if(isHolding && prices[i +1] > buyprice){
+                //Sell
+            }
         }
         
         
