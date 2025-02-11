@@ -10,13 +10,11 @@ class Solution {
 public:
     vector<vector<int>> generateMatrix(int n) {
         vector<vector<int>> output;
-        int left=0;
-        int right = n;
-        int top = 0;
-        int bottom = n;
+        for(int i = 0; i < n; i ++){
+            vector<int> row;
+            output.push_back( new vector<int>());
 
-        while (left <= right && top <= bottom)
-        {}
+        }
     }
 };
 // @lc code=end
