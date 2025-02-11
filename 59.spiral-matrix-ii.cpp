@@ -11,6 +11,7 @@ public:
     vector<vector<int>> generateMatrix(int n) {
         vector<vector<int>> output;
         int left=0;
+        int right = n;
         
     }
 };
