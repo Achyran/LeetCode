@@ -12,6 +12,7 @@ public:
         vector<vector<int>> output;
         int left=0;
         int right = n;
+        int top = 0;
         
     }
 };
