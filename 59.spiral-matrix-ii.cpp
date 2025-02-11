@@ -9,7 +9,7 @@
 class Solution {
 public:
     vector<vector<int>> generateMatrix(int n) {
-        
+        vector<vector<int>> output;
     }
 };
 // @lc code=end
