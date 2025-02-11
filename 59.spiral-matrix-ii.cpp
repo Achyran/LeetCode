@@ -13,7 +13,10 @@ public:
         int left=0;
         int right = n;
         int top = 0;
-        
+        int bottom = n;
+
+        while (left <= right && top <= bottom)
+        {}
     }
 };
 // @lc code=end
