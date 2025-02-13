@@ -10,6 +10,12 @@ public:
     double myPow(double x, int n) {
         
         bool negativ = isNegativ(n);
+        if(n == INT_MIN){
+            if(x ==1 || x == -1) return 1;
+            else return 0;
+        }
+            
+
         n = abs(n);
         if (x == 0) return 0;
         if (n == 0) return 1;
