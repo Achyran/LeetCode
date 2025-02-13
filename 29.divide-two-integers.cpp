@@ -25,6 +25,8 @@ public:
 
         long counter = 0;
         while(l_dividend>= l_divisor ){
+            long k = 1;
+            while(k*2 * l_divisor <= l_dividend)
             l_dividend -= l_divisor;
             counter ++;
         }
