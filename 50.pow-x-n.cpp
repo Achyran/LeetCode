@@ -8,11 +8,19 @@
 class Solution {
 public:
     double myPow(double x, int n) {
+        
+        bool 
+        
         if (x == 0) return 0;
         if (n == 0) return 1;
         
      
         
+    }
+private:
+    bool isNegativ(int numb){
+        numb = numb >> 31;
+        return numb;
     }
 };
 // @lc code=end
