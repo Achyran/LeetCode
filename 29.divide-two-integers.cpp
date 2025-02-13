@@ -10,6 +10,7 @@ class Solution {
 public:
     int divide(int dividend, int divisor) {
 
+        cout << __INT_MAX__ <<endl;
         bool negativ =  !isNegativ(dividend) != !isNegativ(divisor);
 
         dividend = abs(dividend);
@@ -20,6 +21,7 @@ public:
         while(dividend>= divisor ){
             dividend -= divisor;
             counter ++;
+            if(counter == __INT_MAX__) break;
         }
         return negativ? counter *-1 :counter;
     }
