@@ -27,8 +27,9 @@ public:
         while(l_dividend>= l_divisor ){
             long k = 1;
             while(k*2 * l_divisor <= l_dividend)
-            l_dividend -= l_divisor;
-            counter ++;
+                k*=2;
+            l_dividend -= k * l_divisor;
+            counter += k;
         }
         return negativ? counter *-1 :counter;
     }
