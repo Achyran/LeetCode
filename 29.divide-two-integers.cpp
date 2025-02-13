@@ -19,15 +19,14 @@ public:
         //if(dividend == INT_MIN) dividend = -2147483647;
         //if(divisor == INT_MIN) divisor = -2147483647;
 
-         dividend = abs(dividend);
-        divisor = abs(divisor);
+        long l_dividend = abs(dividend);
+        long l_divisor = abs(divisor);
         
 
         int counter = 0;
-        while(dividend>= divisor ){
-            dividend -= divisor;
+        while(l_dividend>= l_divisor ){
+            l_dividend -= l_divisor;
             counter ++;
-            if(counter == __INT_MAX__) break;
         }
         return negativ? counter *-1 :counter;
     }
