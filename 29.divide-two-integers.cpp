@@ -5,14 +5,16 @@
  */
 
 // @lc code=start
-//#include "headers.h"
+#include "headers.h"
 class Solution {
 public:
     int divide(int dividend, int divisor) {
 
-        cout << __INT_MAX__ <<endl;
         bool negativ =  !isNegativ(dividend) != !isNegativ(divisor);
 
+        if(dividend == INT_MIN) dividend = -2147483647;
+        if(divisor == INT_MIN) divisor = -2147483647;
+        
         dividend = abs(dividend);
         divisor = abs(divisor);
         
