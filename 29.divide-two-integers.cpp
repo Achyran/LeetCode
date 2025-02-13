@@ -12,13 +12,13 @@ public:
 
         bool negativ =  !isNegativ(dividend) != !isNegativ(divisor);
 
-        unsigned int u_dividend = abs(dividend);
-        unsigned int u_divisor = abs(divisor);
+        dividend = abs(dividend);
+        divisor = abs(divisor);
         
 
         int counter = 0;
-        while(u_dividend>= u_divisor ){
-            u_dividend -= u_divisor;
+        while(dividend>= divisor ){
+            dividend -= divisor;
             counter ++;
         }
         return negativ? counter *-1 :counter;
