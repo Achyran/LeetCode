@@ -10,12 +10,16 @@ class Solution {
 public:
     int divide(int dividend, int divisor) {
 
+
+        if (dividend == INT_MIN && divisor == -1)
+        return INT_MAX;
+
         bool negativ =  !isNegativ(dividend) != !isNegativ(divisor);
 
-        if(dividend == INT_MIN) dividend = -2147483647;
-        if(divisor == INT_MIN) divisor = -2147483647;
-        
-        dividend = abs(dividend);
+        //if(dividend == INT_MIN) dividend = -2147483647;
+        //if(divisor == INT_MIN) divisor = -2147483647;
+
+         dividend = abs(dividend);
         divisor = abs(divisor);
         
 
