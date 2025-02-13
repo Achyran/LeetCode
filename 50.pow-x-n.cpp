@@ -19,7 +19,7 @@ private:
         if (n == 0) return 1;
 
         double res = Pow(x,n/2);
-        cout << n << endl;
+
         res = res * res;
         if(n/2 == 0){
             return res;
