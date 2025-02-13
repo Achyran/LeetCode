@@ -17,11 +17,11 @@ public:
         
 
         int counter = 0;
-        while(dividend> divisor ){
+        while(dividend>= divisor ){
             dividend -= divisor;
             counter ++;
         }
-        return counter;
+        return negativ? counter *-1 :counter;
     }
 
 private:
